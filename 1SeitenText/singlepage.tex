@@ -1,0 +1,61 @@
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+\usepackage{hyperref} 
+\usepackage[figure]{hypcap}
+%Gummi|065|=)
+
+\title{\textbf{Interoperable IoT Platform Concept}}
+\author{Hauke Buhr}
+\date{20.04.2017 \\ Version 0.6}
+\begin{document}
+
+\maketitle
+
+\section{Abstract}
+% Introduction
+The Internet of Things(IoT) is currently a fast developing topic. It takes place in areas like smart home, smart city, health care and many
+more which could be found in\footnote[3]{KaaProject, IoT Use Cases, https://www.kaaproject.org/iot-use-cases/ , April the 13th 2017}.
+Analysts are speaking of 50 billion IoT devices by 2022\footnote[1]{Hoan-Suk Choi, Deok-Hee Kang and Woo-Seop Rhee, “RISE: Role-based
+Internet of Things Service Environment”, Hanbat National University, Daejeon/Korea, IEEE, 2016.}. This tremendous amount of devices is generating even bigger amounts of data. The produced data has to be processed in a efficient way to be able to compute the data in a proper time. \\
+
+% Problem scenario
+Current open source IoT platforms are vertical designed and cover everything from sensor platform SDKs up to data evaluation and
+presentation services. But they do not cover interoperability between itself and any other platform. That means the data is stored and
+accessible inside the system but could not be accessed by other platforms by default in a convenient way. There are also approaches
+heading to an interoperable platform design. Mostly they are focusing on platform intercommunication and not on a interoperable discovery of
+IoT objects(further also mentioned as things) and data.
+\\
+
+\begin{figure}[ht]
+	\centering
+  \includegraphics[scale=0.4]{../pictures/Toplevel_no_notes.jpg}
+  	\caption{Toplevel View}
+	\label{fig:toplevel}
+\end{figure}
+% Suggested Solution
+This bachelor thesis proposes an interoperable IoT platform concept which is interoperable by design. The concept consists of two types of
+services, first the core services and second connected services.
+The proposed core services are management-, registry- and gateway services. Also several interface specifications are introduced, as you
+can see in \ref{fig:toplevel}. Connected services are here mentioned as \textit{things}, upper level services like data processing and data
+bases or presenting services. Furthermore registries can share their dictionaries with other registries. Shared dictionaries and the
+resulting platform are leading to a stacked IoT platform which could be accessed at any level.
+This approach counteracts a closed and monolithic platform design.
+\\
+
+Furthermore an interoperable platform needs a \textit{thing} discovery. The
+proposed discovery mechanism needs a generic \textit{thing} description scheme. The proposed description scheme is an object oriented
+description scheme.
+Also this thesis describes the results which were made with a proof of concept simulation in OMNeT++. The \textit{thing} description scheme
+considers several features which are reducing the messages(proposed by Choi, Kang and Rhee\footnotemark[1]), makes different data priorities(proposed
+by Choi, Kang and Rhee\footnotemark[1]) and interaction with IoT \textit{things} in three different modes (proposed by Vandikas and
+Tsiatsis\footnote[2]{Konstantinos Vandikas and Vlasios Tsiatsis, “Performance Evaluation of an IOT Platform”, Ericsson Research,
+Stockholm/Sweden, IEEE computer society, 2014.}) possible. \\
+
+The first step is to design the \textit{thing} description scheme and a corresponding test framework. The second step is the
+platform design itself and the third step is the communication design based on proposals of the papers\footnotemark[1] \footnotemark[2]. \\
+
+%The results of this thesis have also been made available on the following GitHub repository: \emph{http://www.github.com/...}
+
+\paragraph{Keywords}: Internet of Things(IoT), Interoperable Core IoT Platform, Distributed platform, Thing design scheme, Communication
+design, OMNeT++
+\end{document}

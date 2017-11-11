@@ -1,0 +1,44 @@
+Das Internet der Dinge~(IoT) ist im Moment ein schnell wachsendes Themengebiet.
+Es findet Anwendung in vielen verschiedenen Bereichen wie zum Beispiel dem Smart Home, der Smart City, dem Gesundheitswesen~\cite{kaa}.
+
+Analysten prognostizieren, dass 50 Milliarden IoT Geräte im Jahr 2022 im Umlauf sein werden~\cite{rise}. 
+Es ist zu erwarten, dass diese große Anzahl von Geräten erzeugt eine sehr große Menge an Daten. 
+Die generierten Daten müssen daher effizient verwaltet werden, um die Daten in angemessener Zeit verarbeiten und übertragen zu können. \newline
+
+% Problem Szenario
+\noindent Gegenwärtige Open-Source IoT Plattformen sind vertikal entworfen und decken die IoT Geräte Hersteller SDKs sowie auch Datenauswertungs- und Darstellungsdiensten ab. 
+Indes decken gegenwärtige Plattformen nicht die Interoperabilität zwischen der eigenen und anderen Plattformen ab. 
+Aus der fehlenden Interoperabilität kann gefolgert werden, dass die Daten nur  innerhalb der eigenen Plattform gespeichert und verwertbar sind.
+Der Zugriff auf die Daten wird so jedoch nicht problemlos von außerhalb möglich. 
+
+Es gibt auch IoT Plattformen, die einen Ansatz zur Interoperabilität enthalten. 
+Doch meist konzentrieren sich die interoperablen Plattformen nur darauf, die Kommunikation von IoT Geräten untereinander zu gewährleisten. \newline
+
+% Suggested Solution
+%% Nochmal überarbeiten ! Objecte als Dinge!
+\noindent Diese Bachelorthesis schlägt ein interoperables IoT Plattformkonzept vor, welches durch sein Design die Eigenschaft der Interoperabilität unterstützt. 
+Das Konzept besteht aus zwei Strukturelementen, zum einen die Kernkomponenten und zum anderen die \glqq Connected Services\grqq{}. 
+Die Kernkomponenten sind die Management-, Registry- und Gatewaykomponente. 
+Außerdem werden mehrere Interfaces für eine einheitliche Schnittstellenbeschreibung eingeführt.
+\glqq Connected Services\grqq{} werden im Folgenden als \glqq Objekte\grqq{} \footnote[1]{Objekte nicht im Kontext einer objektorientierten Programmiersprache.} bezeichnet. 
+Diese Objekte sind \glqq Services\grqq{}\footnote[2]{Services als angebotene Dienste, die Daten von Objekten nutzen.} auf einer höheren Ebene, die Daten verarbeiten, speichern und, oder diese präsentieren. 
+
+Die in dieser Thesis vorgestellte Registry kann ihre Einträge mit einer anderen Registry teilen. 
+Diese verteilten Registryeinträge und die angestrebte Plattform führen zu einer Hierarchie der IoT Plattformen, deren Daten auf jeder freigegebenen Ebene verfügbar sind. 
+Dieser Ansatz fördert somit einem heterogenen und offenen Plattformdesign.
+
+Außerdem braucht eine interoperable Plattform eine Objektsuchfunktion. 
+Die vorgestellte Suchfunktion benötigt eine generische Beschreibungssprache. 
+Die in dieser Thesis vorgestellte Beschreibungssprache ist objektorientiert.
+ 
+Zu dem werden in dieser Thesis die Ergebnisse aus einer Proof of Concept Simulation in OMNeT++~\cite{omnetpp_simulation_manual} bereitgestellt und ausgewertet. 
+Es zeigt sich, dass die Komplexität der Objektbeschreibung minimiert wird, da nur wenige Merkmale beschrieben werden müssen. 
+Jedoch besteht durch den erweiterbaren Aufbau der Objektbeschreibung eine effektivere Möglichkeit der Beschreibung.
+
+Auch die vorgeschlagenen Kommunikationsmuster in dieser Thesis sollen das Nachrichtenaufkommen reduzieren und eine Priorisierung von Nachrichten ermöglichen~\cite{rise}.\newline
+
+\noindent Teil dieser Bachelorthesis ist die Analyse von Anforderungen an eine IoT Plattform, mit anschließender Analyse einiger bestehender Plattformen.
+Des Weiteren werden Kommunikationsmuster definiert und die Objektbeschreibungssprache wird designt.
+Am Ende wird ein Entwurf der Plattform angeboten und mit OMNet++ demonstriert und evaluiert.\newline
+
+%The results of this thesis have also been made available on the following GitHub repository: \emph{http://www.github.com/...}
